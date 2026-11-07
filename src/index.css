@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Kanit: ฟอนต์สายวัยรุ่น ทรงมนทันสมัย นิยมมากในเว็บไทย */
+  --font-sans: 'Kanit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ภาษาไทยมีสระบน/ล่าง เว้นบรรทัดเพิ่มนิดหน่อยจะอ่านสบายขึ้น */
+  --leading-tight: 1.35;
+  --leading-normal: 1.65;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ช่องกรอกและปุ่มใช้ฟอนต์เดียวกับหน้าเว็บ */
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* ขยายตัวอักษรจิ๋วเล็กน้อยให้อ่านง่ายขึ้น */
+.text-\[10px\] { font-size: 11.5px; }
+.text-\[11px\] { font-size: 12.5px; }
+
+/* เอฟเฟกต์การกดการ์ดนุ่มฟู */
+.sweet-card-hover {
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.sweet-card-hover:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 14px 28px -6px rgba(244, 114, 182, 0.2);
+}
+
+.sweet-card-hover:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* เอฟเฟกต์เด้งฉาก Modal */
+@keyframes modalPop {
+  0% { opacity: 0; transform: scale(0.9) translateY(10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-modal-pop {
+  animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

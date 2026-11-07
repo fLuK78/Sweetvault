@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* ปรับแต่ง Scrollbar ให้ดูมนๆ น่ารัก */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #f472b6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
+
+/* เอฟเฟกต์พื้นหลังแบบเก๋ๆ และอนิเมชันดุ๊กดิ๊ก */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* เอฟเฟกต์การ์ดแก้วโปร่งแสงละมุนๆ */
+.sweet-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 2px solid #fce7f3;
+  box-shadow: 0 10px 25px -5px rgba(244, 114, 182, 0.15);
+}
